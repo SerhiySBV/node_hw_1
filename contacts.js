@@ -19,7 +19,7 @@ async function getAllContact() {
   const contacts = await listContacts();
 
   contacts
-    ? console.log(contacts, chalk.greenBright("Success!"))
+    ? console.table(contacts) & console.log(chalk.greenBright("Success!"))
     : console.log(chalk.redBright("Somthink went wrong!"));
 }
 
